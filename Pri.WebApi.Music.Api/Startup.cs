@@ -10,7 +10,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Pri.Oe.WebApi.Music.Api.Repositories;
 using Pri.Oe.WebApi.Music.Core.Repositories.Interfaces;
-using Pri.Oe.WebApi.Music.Core.Services.Images;
 using Pri.Oe.WebApi.Music.Infrastructure.Data;
 using Pri.Oe.WebApi.Music.Infrastructure.Repositories;
 using Pri.WebApi.Music.Core.Interfaces.Services;
@@ -41,8 +40,6 @@ namespace Pri.Oe.WebApi.Music.Api
             services.AddScoped<IAlbumRepository, AlbumRepository>();
             services.AddScoped<IArtistepository, ArtistRepository>();
             services.AddScoped<IAlbumService, AlbumService>();
-            services.AddScoped<IImageService, ImageService>();
-            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
