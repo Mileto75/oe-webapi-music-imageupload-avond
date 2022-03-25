@@ -46,7 +46,22 @@ namespace Pri.Oe.WebApi.Music.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            return Ok();
+            var result = await _albumService.GetByIdAsync(id);
+            if(result.IsSuccess == false)
+            {
+                return BadRequest(result.Error);
+            }
+            AlbumResponseDto albumResponseDto
+                = new AlbumResponseDto
+                {
+                    Id = result.Items.First().Id,
+                    Name = result.Items.First().Name,
+                    ReleaseYear = result.Items.First().ReleaseDate.Year.ToString(),
+                    ArtistId = result.Items.First().ArtistId,
+                    ArtistName = result.Items.First().Artist.Name,
+                    Image = result.Items.First().Image
+                };
+            return Ok(albumResponseDto);
         }
 
         [HttpPost]
@@ -57,7 +72,13 @@ namespace Pri.Oe.WebApi.Music.Api.Controllers
                 return BadRequest(ModelState.Values);
             }
             //call service method
-            return Ok();
+            if(await _albumService.AddAsync(albumRequestDto.Name,albumRequestDto.ReleaseDate,
+                albumRequestDto.Image,albumRequestDto.ArtistId))
+            {
+                return Ok("Album addedd!");
+            }
+            return BadRequest("Album not added! Try again!");
+            
         }
 
         [HttpPut]

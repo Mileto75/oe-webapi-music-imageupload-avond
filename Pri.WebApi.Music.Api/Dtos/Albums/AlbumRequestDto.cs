@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Pri.Oe.WebApi.Music.Api.Dtos.Albums
 {
-    public class AlbumRequestDto : BaseDto
+    public class AlbumRequestDto
     {
         [Required]
         public string Name { get; set; }
