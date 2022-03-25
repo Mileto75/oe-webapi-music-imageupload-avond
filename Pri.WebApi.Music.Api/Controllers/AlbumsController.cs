@@ -78,7 +78,6 @@ namespace Pri.Oe.WebApi.Music.Api.Controllers
                 return Ok("Album addedd!");
             }
             return BadRequest("Album not added! Try again!");
-            
         }
 
         [HttpPut]
