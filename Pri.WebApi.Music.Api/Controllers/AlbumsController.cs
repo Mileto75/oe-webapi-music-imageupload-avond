@@ -23,19 +23,62 @@ namespace Pri.Oe.WebApi.Music.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok();
+            var result = await _albumService.GetAllAsync();
+            if(!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            var albumsResponseDto = result.Items.Select(
+                r => new AlbumResponseDto 
+                {
+                    Id = r.Id,
+                    Name = r.Name,
+                    ArtistId = r.ArtistId,
+                    ArtistName = r.Artist.Name,
+                    Image = r.Image,
+                    ReleaseYear = r.ReleaseDate.Year.ToString()
+                }).ToList();
+            { }
+            
+            return Ok(albumsResponseDto);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            return Ok();
+            var result = await _albumService.GetByIdAsync(id);
+            if(result.IsSuccess == false)
+            {
+                return BadRequest(result.Error);
+            }
+            AlbumResponseDto albumResponseDto
+                = new AlbumResponseDto
+                {
+                    Id = result.Items.First().Id,
+                    Name = result.Items.First().Name,
+                    ReleaseYear = result.Items.First().ReleaseDate.Year.ToString(),
+                    ArtistId = result.Items.First().ArtistId,
+                    ArtistName = result.Items.First().Artist.Name,
+                    Image = result.Items.First().Image
+                };
+            return Ok(albumResponseDto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(AlbumRequestDto albumRequestDto)
+        public async Task<IActionResult> Add([FromForm]AlbumRequestDto albumRequestDto)
         {
-            return Ok();
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values);
+            }
+            //call service method
+            if(await _albumService.AddAsync(albumRequestDto.Name,albumRequestDto.ReleaseDate,
+                albumRequestDto.Image,albumRequestDto.ArtistId))
+            {
+                return Ok("Album addedd!");
+            }
+            return BadRequest("Album not added! Try again!");
+            
         }
 
         [HttpPut]
