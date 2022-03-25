@@ -33,9 +33,25 @@ namespace Pri.WebApi.Music.Core.Services
             };
         }
 
-        public Task<ItemResultModel<Album>> GetByIdAsync(int id)
+        public async Task<ItemResultModel<Album>> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            ItemResultModel<Album> itemResultModel = new();
+            if(id < 1)
+            {
+                itemResultModel.IsSuccess = false;
+                itemResultModel.Error = "No album found!";
+                return itemResultModel;
+            }
+            var album = await _albumRepository.GetByIdAsync(id);
+            if(album == null)
+            {
+                itemResultModel.IsSuccess = false;
+                itemResultModel.Error = "No album found!";
+                return itemResultModel;
+            }
+            itemResultModel.Items = new List<Album> { album };
+            itemResultModel.IsSuccess = true;
+            return itemResultModel;
         }
 
         public Task<bool> UpdateAsync(int id, string name, DateTime releaseDate, string image, int artistId)
