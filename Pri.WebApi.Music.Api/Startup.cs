@@ -13,6 +13,8 @@ using Pri.Oe.WebApi.Music.Core.Repositories.Interfaces;
 using Pri.Oe.WebApi.Music.Core.Services.Images;
 using Pri.Oe.WebApi.Music.Infrastructure.Data;
 using Pri.Oe.WebApi.Music.Infrastructure.Repositories;
+using Pri.WebApi.Music.Core.Interfaces.Services;
+using Pri.WebApi.Music.Core.Services;
 
 namespace Pri.Oe.WebApi.Music.Api
 {
@@ -38,7 +40,7 @@ namespace Pri.Oe.WebApi.Music.Api
 
             services.AddScoped<IAlbumRepository, AlbumRepository>();
             services.AddScoped<IArtistepository, ArtistRepository>();
-            services.AddScoped<IAlbumRepository, AlbumRepository>();
+            services.AddScoped<IAlbumService, AlbumService>();
             services.AddScoped<IImageService, ImageService>();
             services.AddHttpContextAccessor();
         }
