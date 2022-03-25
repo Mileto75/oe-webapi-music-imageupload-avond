@@ -11,5 +11,6 @@ namespace Pri.WebApi.Music.Core.Services.Models
     {
         public IEnumerable<T> Items { get; set; }
         public string Error { get; set; }
+        public bool IsSuccess { get; set; }
     }
 }

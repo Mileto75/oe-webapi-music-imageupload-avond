@@ -23,9 +23,14 @@ namespace Pri.WebApi.Music.Core.Services
             throw new NotImplementedException();
         }
 
-        public Task<ItemResultModel<Album>> GetAllAsync()
+        public async Task<ItemResultModel<Album>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return new ItemResultModel<Album>
+            {
+                Items = await _albumRepository.ListAllAsync(),
+                Error = "",
+                IsSuccess = true
+            };
         }
 
         public Task<ItemResultModel<Album>> GetByIdAsync(int id)
