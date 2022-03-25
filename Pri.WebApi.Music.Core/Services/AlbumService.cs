@@ -1,4 +1,5 @@
-﻿using Pri.Oe.WebApi.Music.Core.Entities;
+﻿using Microsoft.AspNetCore.Http;
+using Pri.Oe.WebApi.Music.Core.Entities;
 using Pri.Oe.WebApi.Music.Core.Repositories.Interfaces;
 using Pri.WebApi.Music.Core.Interfaces.Services;
 using Pri.WebApi.Music.Core.Services.Models;
@@ -18,9 +19,25 @@ namespace Pri.WebApi.Music.Core.Services
         {
             _albumRepository = albumRepository;
         }
-        public Task<bool> AddAsync(string name, DateTime releaseDate, string image, int artistId)
+        public async Task<bool> AddAsync(string name, DateTime releaseDate, IFormFile image, int artistId)
         {
-            throw new NotImplementedException();
+            var newAlbum = new Album 
+            {
+                Name = name,
+                ReleaseDate = releaseDate,
+                Image = image.FileName,
+                ArtistId = artistId
+            };
+            try 
+            {
+                await _albumRepository.AddAsync(newAlbum);
+                return true;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
 
         public async Task<ItemResultModel<Album>> GetAllAsync()
@@ -54,9 +71,27 @@ namespace Pri.WebApi.Music.Core.Services
             return itemResultModel;
         }
 
-        public Task<bool> UpdateAsync(int id, string name, DateTime releaseDate, string image, int artistId)
+        public async Task<bool> UpdateAsync(int id, string name, DateTime releaseDate, IFormFile image, int artistId)
         {
-            throw new NotImplementedException();
+            var albumToUpdate = await _albumRepository.GetByIdAsync(id);
+            if(albumToUpdate == null)
+            {
+                return false;
+            }
+            albumToUpdate.Name = name;
+            albumToUpdate.ArtistId = artistId;
+            albumToUpdate.ReleaseDate = releaseDate;
+            albumToUpdate.Image = image.FileName;
+            try 
+            {
+                await _albumRepository.UpdateAsync(albumToUpdate);
+                return true;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 }

@@ -23,7 +23,24 @@ namespace Pri.Oe.WebApi.Music.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok();
+            var result = await _albumService.GetAllAsync();
+            if(!result.IsSuccess)
+            {
+                return BadRequest(result.Error);
+            }
+            var albumsResponseDto = result.Items.Select(
+                r => new AlbumResponseDto 
+                {
+                    Id = r.Id,
+                    Name = r.Name,
+                    ArtistId = r.ArtistId,
+                    ArtistName = r.Artist.Name,
+                    Image = r.Image,
+                    ReleaseYear = r.ReleaseDate.Year.ToString()
+                }).ToList();
+            { }
+            
+            return Ok(albumsResponseDto);
         }
 
         [HttpGet("{id}")]
