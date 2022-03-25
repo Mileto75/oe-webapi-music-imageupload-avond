@@ -33,8 +33,13 @@ namespace Pri.Oe.WebApi.Music.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(AlbumRequestDto albumRequestDto)
+        public async Task<IActionResult> Add([FromForm]AlbumRequestDto albumRequestDto)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values);
+            }
+            //call service method
             return Ok();
         }
 
