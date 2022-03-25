@@ -38,6 +38,7 @@ namespace Pri.Oe.WebApi.Music.Api
 
             services.AddScoped<IAlbumRepository, AlbumRepository>();
             services.AddScoped<IArtistepository, ArtistRepository>();
+            services.AddScoped<IAlbumRepository, AlbumRepository>();
             services.AddScoped<IImageService, ImageService>();
             services.AddHttpContextAccessor();
         }
