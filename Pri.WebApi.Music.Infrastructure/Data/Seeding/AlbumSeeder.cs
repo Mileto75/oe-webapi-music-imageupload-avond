@@ -16,7 +16,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 1,
                     Name = "...And Justice for All",
                     ReleaseDate = DateTime.Parse("7/09/1988 0:00:00"),
-                    Image = "images/album/andjusticeforall.jpg",
+                    Image = "andjusticeforall.jpg",
                     ArtistId = 1
                 },
                 new Album
@@ -24,7 +24,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 2,
                     Name = "Metallica",
                     ReleaseDate = DateTime.Parse("12/08/1991 0:00:00"),
-                    Image = "images/album/metallica.jpg",
+                    Image = "metallica.jpg",
                     ArtistId = 1
                 },
                 new Album
@@ -32,7 +32,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 3,
                     Name = "Master of Puppets",
                     ReleaseDate = DateTime.Parse("3/03/1986 0:00:00"),
-                    Image = "images/album/masterofpuppets.jpg",
+                    Image = "masterofpuppets.jpg",
                     ArtistId = 1
                 },
                 new Album
@@ -40,7 +40,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 4,
                     Name = "Hardwired...To Self-Destruct",
                     ReleaseDate = DateTime.Parse("18/11/2016 0:00:00"),
-                    Image = "images/album/hardwired.jpg",
+                    Image = "hardwired.jpg",
                     ArtistId = 1
                 },
 
@@ -50,7 +50,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 5,
                     Name = "Appetite For Destruction",
                     ReleaseDate = DateTime.Parse("21/07/1987 0:00:00"),
-                    Image = "images/album/appetitefordestruction.jpg",
+                    Image = "appetitefordestruction.jpg",
                     ArtistId = 2
                 },
                 new Album
@@ -58,7 +58,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 6,
                     Name = "Use Your Illusion I",
                     ReleaseDate = DateTime.Parse("17/09/1991 0:00:00"),
-                    Image = "images/album/useyourillusion1.jpg",
+                    Image = "useyourillusion1.jpg",
                     ArtistId = 2
                 },
                 new Album
@@ -66,7 +66,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 7,
                     Name = "Use Your Illusion II",
                     ReleaseDate = DateTime.Parse("17/09/1991 0:00:00"),
-                    Image = "images/album/useyourillusion2.jpg",
+                    Image = "useyourillusion2.jpg",
                     ArtistId = 2
                 },
 
@@ -76,7 +76,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 8,
                     Name = "MTV Unplugged In New York",
                     ReleaseDate = DateTime.Parse("1/11/1994 0:00:00"),
-                    Image = "images/album/mtvunpluggedinnewyork.jpg",
+                    Image = "mtvunpluggedinnewyork.jpg",
                     ArtistId = 3
                 },
                 new Album
@@ -84,7 +84,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 9,
                     Name = "Live at Reading",
                     ReleaseDate = DateTime.Parse("1/01/2009 0:00:00"),
-                    Image = "images/album/liveatreading.jpg",
+                    Image = "liveatreading.jpg",
                     ArtistId = 3
                 },
                 new Album
@@ -92,7 +92,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 10,
                     Name = "Nevermind",
                     ReleaseDate = DateTime.Parse("26/09/1991 0:00:00"),
-                    Image = "images/album/nevermind.jpg",
+                    Image = "nevermind.jpg",
                     ArtistId = 3
                 },
 
@@ -102,7 +102,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 11,
                     Name = "Ten",
                     ReleaseDate = DateTime.Parse("27/08/1991 0:00:00"),
-                    Image = "images/album/ten.jpg",
+                    Image = "ten.jpg",
                     ArtistId = 4
                 },
                 new Album
@@ -110,7 +110,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 12,
                     Name = "Spin The Black Circle Live In Seattle '95",
                     ReleaseDate = DateTime.Parse("1/01/1995 0:00:00"),
-                    Image = "images/album/spintheblackcirclelive.jpg",
+                    Image = "spintheblackcirclelive.jpg",
                     ArtistId = 4
                 },
 
@@ -120,7 +120,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 13,
                     Name = "Live @ The Ancienne Belgique",
                     ReleaseDate = DateTime.Parse("30/04/2010 0:00:00"),
-                    Image = "images/album/livetheanciennebelgique.jpg",
+                    Image = "livetheanciennebelgique.jpg",
                     ArtistId = 5
                 },
                 new Album
@@ -128,7 +128,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 14,
                     Name = "Black Fuel",
                     ReleaseDate = DateTime.Parse("27/01/1997 0:00:00"),
-                    Image = "images/album/blackfuel.jpg",
+                    Image = "blackfuel.jpg",
                     ArtistId = 5
                 },
 
@@ -138,7 +138,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 15,
                     Name = "Rage Against The Machine",
                     ReleaseDate = DateTime.Parse("03/11/1992 0:00:00"),
-                    Image = "images/album/rageagainstthemachine.jpg",
+                    Image = "rageagainstthemachine.jpg",
                     ArtistId = 7
                 },
                 new Album
@@ -146,7 +146,7 @@ namespace Pri.Oe.WebApi.Music.Infrastructure.Data.Seeding
                     Id = 16,
                     Name = "Evil Empire",
                     ReleaseDate = DateTime.Parse("16/04/1996 0:00:00"),
-                    Image = "images/album/evilempire.jpg",
+                    Image = "evilempire.jpg",
                     ArtistId = 7
                 }
                 );

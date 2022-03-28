@@ -49,7 +49,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 1,
                             ArtistId = 1,
-                            Image = "images/album/andjusticeforall.jpg",
+                            Image = "andjusticeforall.jpg",
                             Name = "...And Justice for All",
                             ReleaseDate = new DateTime(1988, 9, 7, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -57,7 +57,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 2,
                             ArtistId = 1,
-                            Image = "images/album/metallica.jpg",
+                            Image = "metallica.jpg",
                             Name = "Metallica",
                             ReleaseDate = new DateTime(1991, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -65,7 +65,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 3,
                             ArtistId = 1,
-                            Image = "images/album/masterofpuppets.jpg",
+                            Image = "masterofpuppets.jpg",
                             Name = "Master of Puppets",
                             ReleaseDate = new DateTime(1986, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -73,7 +73,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 4,
                             ArtistId = 1,
-                            Image = "images/album/hardwired.jpg",
+                            Image = "hardwired.jpg",
                             Name = "Hardwired...To Self-Destruct",
                             ReleaseDate = new DateTime(2016, 11, 18, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -81,7 +81,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 5,
                             ArtistId = 2,
-                            Image = "images/album/appetitefordestruction.jpg",
+                            Image = "appetitefordestruction.jpg",
                             Name = "Appetite For Destruction",
                             ReleaseDate = new DateTime(1987, 7, 21, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -89,7 +89,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 6,
                             ArtistId = 2,
-                            Image = "images/album/useyourillusion1.jpg",
+                            Image = "useyourillusion1.jpg",
                             Name = "Use Your Illusion I",
                             ReleaseDate = new DateTime(1991, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -97,7 +97,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 7,
                             ArtistId = 2,
-                            Image = "images/album/useyourillusion2.jpg",
+                            Image = "useyourillusion2.jpg",
                             Name = "Use Your Illusion II",
                             ReleaseDate = new DateTime(1991, 9, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -105,7 +105,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 8,
                             ArtistId = 3,
-                            Image = "images/album/mtvunpluggedinnewyork.jpg",
+                            Image = "mtvunpluggedinnewyork.jpg",
                             Name = "MTV Unplugged In New York",
                             ReleaseDate = new DateTime(1994, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -113,7 +113,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 9,
                             ArtistId = 3,
-                            Image = "images/album/liveatreading.jpg",
+                            Image = "liveatreading.jpg",
                             Name = "Live at Reading",
                             ReleaseDate = new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -121,7 +121,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 10,
                             ArtistId = 3,
-                            Image = "images/album/nevermind.jpg",
+                            Image = "nevermind.jpg",
                             Name = "Nevermind",
                             ReleaseDate = new DateTime(1991, 9, 26, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -129,7 +129,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 11,
                             ArtistId = 4,
-                            Image = "images/album/ten.jpg",
+                            Image = "ten.jpg",
                             Name = "Ten",
                             ReleaseDate = new DateTime(1991, 8, 27, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -137,7 +137,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 12,
                             ArtistId = 4,
-                            Image = "images/album/spintheblackcirclelive.jpg",
+                            Image = "spintheblackcirclelive.jpg",
                             Name = "Spin The Black Circle Live In Seattle '95",
                             ReleaseDate = new DateTime(1995, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -145,7 +145,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 13,
                             ArtistId = 5,
-                            Image = "images/album/livetheanciennebelgique.jpg",
+                            Image = "livetheanciennebelgique.jpg",
                             Name = "Live @ The Ancienne Belgique",
                             ReleaseDate = new DateTime(2010, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -153,7 +153,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 14,
                             ArtistId = 5,
-                            Image = "images/album/blackfuel.jpg",
+                            Image = "blackfuel.jpg",
                             Name = "Black Fuel",
                             ReleaseDate = new DateTime(1997, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -161,7 +161,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 15,
                             ArtistId = 7,
-                            Image = "images/album/rageagainstthemachine.jpg",
+                            Image = "rageagainstthemachine.jpg",
                             Name = "Rage Against The Machine",
                             ReleaseDate = new DateTime(1992, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -169,7 +169,7 @@ namespace Pri.WebApi.Music.Infrastructure.Migrations
                         {
                             Id = 16,
                             ArtistId = 7,
-                            Image = "images/album/evilempire.jpg",
+                            Image = "evilempire.jpg",
                             Name = "Evil Empire",
                             ReleaseDate = new DateTime(1996, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
